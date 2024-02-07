@@ -1,0 +1,86 @@
+@import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    background: #ececec;
+    font-family: 'Roboto';
+}
+
+
+body{
+    padding: 2vh 2vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+
+}
+
+header{
+    grid-area: header;
+}
+aside{
+    grid-area: aside;
+    display: flex;
+    height: 100vh;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    grid-area: main;
+}
+
+
+/*-----------Componentes del aside--------------*/
+
+aside .headerAside{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr;
+    justify-content: start;
+    align-content: center;
+    justify-items: start;
+    column-gap: 1vw;  
+}
+
+aside .asideMain{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(8, auto);
+    min-height: 70vh;
+}
+
+aside .asideMain i{
+    grid-column: 1/2;
+}
+
+aside .asideMain i.bx-chevron-down{
+    grid-column: -1/-2;
+}
+aside .asideMain i.elements{
+    grid-row: 3/4;
+}
+aside .asideMain i.forms{
+    grid-row: 9/10;
+}
+
+
+aside .asideMain h6{
+    grid-column: 2/3;
+}
+
+aside .asideMain p{
+    grid-column: 1/-1;
+}
+    
+aside ul{
+    list-style: none;
+}
