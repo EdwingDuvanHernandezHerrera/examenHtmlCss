@@ -1,10 +1,11 @@
 @import url("variables.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 :root{
-    --colorPrimary: #0A70CB;
+    --colorPrimary: #D6DBDF;
     --colorSecondary: #b11bb1;
     --bgPrimary: #ece3e3;
-    --colorThird: rgb(207, 66, 66)616;
+    --colorFourth: #2E4053;
+    
 }
 
 
@@ -14,7 +15,17 @@
     box-sizing: border-box;
     font-size: 15px;
     background: #ececec;
-    font-family: 'Roboto';
+}
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+
+h3,h4,h5,h6,span{
+    font-size: 1.2rem;
 }
 
 h1,h2,h3,h4,h5,h6,a,span,p,i,div{
@@ -43,9 +54,12 @@ main aside{
     flex-direction: column;
     justify-content: space-around;
     padding-left: 2vw;
-    color: var(--bgPrimary);
+    color: var(--colorFourth);
 }
 
+main aside .botonLinks{
+    width: 100%;
+}
 
 main aside .links{
     display: flex;
@@ -60,8 +74,17 @@ main aside .links{
 
 main aside a{
     text-decoration: none;
-    color: var(--bgPrimary);
+    color: var(--colorFourth);
+    width: 100%;
 }
+
+.active{
+    background: var(--bgPrimary);
+    border: 2px solid var(--colorFourth);
+    border-color: var(--colorSecondary);
+    border-radius: 5px;
+}
+
 
 /* ----------Elementos del area de productos---------- */
 main .containerProductos{
@@ -75,16 +98,16 @@ main .containerProductos{
     height: 90vh;
     border-radius: 50px;
     align-items: center;
-    column-gap: 2vw;
+    column-gap: 1vw;
     row-gap: 3vh;
     padding: 2vh 2vw;
     overflow: auto;
-
 
 }
 
 main .containerProductos h1{
     grid-column: 1/-1;
+    color: var(--bgPrimary);
 }
 
 main .containerProductos .target{
@@ -113,7 +136,7 @@ main .containerProductos .target .contentTarget{
     justify-items: center;
     align-items: center;
     border-radius: 10px;
-    background-color: var(--colorPrimary);
+    background-color: var(--colorFourth);
     padding: .5vh .5vw;
     color: var(--bgPrimary);
 }
@@ -128,8 +151,8 @@ main .containerProductos .target .contentTarget h5{
 
 main .containerProductos .target .contentTarget a{
     text-decoration: none;
-    background: var(--colorThird);
-    color: var(--bgPrimary);
+    background: var(--colorPrimary);
+    color: var(--colorFourth);
     border: 1px solid var(--bgPrimary);
     border-radius: 5px;
     width: 80px;
