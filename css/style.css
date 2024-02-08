@@ -1,12 +1,6 @@
 @import url("variables.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
-:root{
-    --colorPrimary: #D6DBDF;
-    --colorSecondary: #b11bb1;
-    --bgPrimary: #ece3e3;
-    --colorFourth: #2E4053;
-    
-}
+
 
 
 *{
@@ -57,10 +51,17 @@ main aside{
     color: var(--colorFourth);
 }
 
-main aside .botonLinks{
+main aside .botonLink{
     width: 100%;
+    padding: 1vh;
 }
 
+main aside .botonLink:hover{
+    background: var(--colorSecondary);
+}
+main aside .botonLink:hover a{
+   color: var(--colorPrimary);
+}
 main aside .links{
     display: flex;
     flex-direction: column;
@@ -80,9 +81,8 @@ main aside a{
 
 .active{
     background: var(--bgPrimary);
-    border: 2px solid var(--colorFourth);
+    border: 3px solid var(--colorFourth);
     border-color: var(--colorSecondary);
-    border-radius: 5px;
 }
 
 
@@ -94,7 +94,6 @@ main .containerProductos{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 5fr 5fr;
-    width: 100%;
     height: 90vh;
     border-radius: 50px;
     align-items: center;
@@ -159,6 +158,135 @@ main .containerProductos .target .contentTarget a{
     height: 25px;
     text-align: center; 
     justify-self: end;
+}
+
+/* -------------Carrito de compras--------------- */
+
+main .containerCarrito{
+    grid-area: contenedor;
+    background: var(--colorSecondary);
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr auto-fill 1fr;
+    border-radius: 50px;
+    align-items: center;
+    padding: 2vh 2vw;
+    overflow: auto;
+    border: none;
+    box-shadow: 1px 1px var(--colorFourth);
+}
+
+main h1{
+    color: var(--bgPrimary);
+}
+
+main .containerCarrito .productosCarrito{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 15vh;
+    justify-items: center;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+}
+
+main .containerCarrito .productosCarrito img{
+    width: auto;
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 1/2 span;   
+    max-width: 40%; 
+}
+
+main .containerCarrito .productosCarrito h3{
+    grid-row: 1/2;
+}
+main .containerCarrito .productosCarrito h4{
+    grid-row: 2/3;
+}
+main .containerCarrito .productosCarrito i{
+    grid-row: 1/2 span;
+    font-size: 1.5rem;
+    color: var(--colorFourth);
+
+}
+main .containerCarrito .productosCarrito input{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    border: 1px solid black;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main .containerCarrito .productosFooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: space-between;
+    align-items: center;    
+    
+}
+main .containerCarrito .productosFooter button{
+    width: 120px;
+    height: 30px;
+    background: var(--colorPrimary);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px var(--colorFourth);
+}
+main .containerCarrito .productosFooter button a{
+    text-decoration: none;
+    color: var(--colorFourth);
+}
+
+main .containerCarrito .productosFooter .contetTotal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 50%;
+    height: 8vh;
+    align-items: center;
+    justify-items: center;
+    justify-self: end;
+    color: var(--bgPrimary);  
+    background: var(--colorFourth);
+    border-radius: 10px;
+
+}
+main .containerCarrito .productosFooter .contetTotal button{
+    grid-column: 2/3;
+    grid-row: 1/-1;
+}
+main .containerCarrito .productosCarrito a{
+    grid-row: 1/2 span;
+}
+
+.carritoVacio{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    background: var(--colorSecondary);
+    width: 100%;
+    height: 90vh;
+    border-radius: 50px;
+    padding: 2vh 2vw;
+}
+.mensajeVacio{
+    color: var(--bgPrimary);
+    height: 100%;
+}
+
+#dosProductos{
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 2vh;
+}
+#unProducto{
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 2vh;
 }
 
 
